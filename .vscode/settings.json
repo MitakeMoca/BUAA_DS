@@ -1,7 +1,0 @@
-{
-	"files.associations": {
-		".eslintrc": "json",
-		"*.vue": "html",
-		"stdio.h": "c"
-	}
-}
