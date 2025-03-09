@@ -1,58 +1,61 @@
 /*
-    后缀表达式转中缀表达式
-    输入：一行字符串，表示后缀表达式，每个操作数都是字母变量，中间可以有多余的空格
-    输出：一行字符串，表示后缀表达式对应的中缀表达式
+    结构体排序，先按学生名字字典序排序；当学生名字相同时，按照 id 从小到大排序
 
-    示例输入：ABCD/+E*-
-    示例输出：(A-((B+(C/D))*E))
+    输入：
+        第一行一个整数 n，表示学生数目
+        接下来 n 行，每行一个整数和一个字符串（不带空格），表示学生 id 和姓名
+    输出：
+        n 行，每行输出学生 id 和 name
+
+    示例输入：
+        5
+        1 moca
+        2 ran
+        3 tsugu
+        4 moca
+        5 lisi
+        
+    示例输出：
+        1 moca
+        2 ran
+        3 tsugu
+        4 moca
+        5 lisi
 */
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-#include <ctype.h>
+#include <stdlib.h>
 
-char stack[105][105];
-int top = -1;
-
-void push(char* str) {
-    strcpy(stack[++top], str);
+int read() {
+    int tem;
+    scanf("%d",&tem);
+    return tem;
 }
 
-char* pop() {
-    return stack[top--];
-}
+typedef struct student student;
+struct student {
+    char name[15];
+    int id;
+};
 
-int isOperator(char ch) {
-    return ch == '+' || ch == '-' || ch == '*' || ch == '/';
+student a[20];
+
+int cmp(const void *a, const void *b) {
+    student x = *(student *)a;
+    student y = *(student *)b;
+    if(x.id != y.id)
+        return x.id - y.id;
+    return strcmp(x.name, y.name);
 }
 
 int main() {
-    char postfix[105];
-    char infix[105 * 2]; // 预留足够的空间存储中缀表达式
-    gets(postfix);
-    
-    int len = strlen(postfix);
-    
-    for (int i = 0; i < len; i++) {
-        char ch = postfix[i];
+    int n = read();
+    for(int i = 1; i <= n; i++)
+        a[i].id = read(), scanf("%s", a[i].name);
 
-        if (ch == ' ') 
-            continue;
-
-        if (isalpha(ch)) {
-            char operand[2] = {ch, '\0'};
-            push(operand);
-        } else if (isOperator(ch)) {
-            char operand2[105], operand1[105];
-            strcpy(operand2, pop());
-            strcpy(operand1, pop());
-
-            snprintf(infix, sizeof(infix), "(%s%c%s)", operand1, ch, operand2);
-            push(infix);
-        }
-    }
-    
-    printf("%s\n", stack[top]);
+    qsort(a + 1, n, sizeof(a[0]), cmp);
+    for(int i = 1; i <= n; i++)
+        printf("%d %s\n", a[i].id, a[i].name);
     return 0;
 }
