@@ -14,13 +14,13 @@
         3 tsugu
         4 moca
         5 lisi
-        
+
     示例输出：
+        5 lisi
         1 moca
+        4 moca
         2 ran
         3 tsugu
-        4 moca
-        5 lisi
 */
 
 #include <stdio.h>
@@ -44,9 +44,9 @@ student a[20];
 int cmp(const void *a, const void *b) {
     student x = *(student *)a;
     student y = *(student *)b;
-    if(x.id != y.id)
-        return x.id - y.id;
-    return strcmp(x.name, y.name);
+    if(strcmp(x.name, y.name))
+        return strcmp(x.name, y.name);
+    return x.id - y.id;
 }
 
 int main() {
