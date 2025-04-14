@@ -41,14 +41,12 @@ int main() {
             } else if (op == '(') {
                 opStk[opTop++] = op;
             } else if (op == ')') {
-                while (opTop > 0 && opStk[opTop - 1] != '(') {
+                while (opTop > 0 && opStk[opTop - 1] != '(') 
                     cal(opStk[--opTop]);
-                }
                 opTop--; // 弹出'('
             } else {
-                while (opTop > 0 && cmp(opStk[opTop - 1], op)) {
+                while (opTop > 0 && cmp(opStk[opTop - 1], op)) 
                     cal(opStk[--opTop]);
-                }
                 opStk[opTop++] = op;
             }
         } else { // 读取数字
