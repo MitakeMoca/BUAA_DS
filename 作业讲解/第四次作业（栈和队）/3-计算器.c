@@ -32,13 +32,10 @@ int main() {
     while (str[i]) {
         char op = str[i];
         i++;
-        if (op == ' ')
+        if (op == ' ' || op == '=')
             continue;
         if (!isdigit(op)) { // 说明是一个符号
-            if (op == '=') break;
-            if (opTop == 0 || opStk[opTop - 1] == '(') {
-                opStk[opTop++] = op;
-            } else if (op == '(') {
+            if (opTop == 0 || op == '(') {
                 opStk[opTop++] = op;
             } else if (op == ')') {
                 while (opTop > 0 && opStk[opTop - 1] != '(') 
