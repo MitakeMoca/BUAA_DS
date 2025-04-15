@@ -11,7 +11,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
@@ -38,7 +38,7 @@ nptr getnode(int id) {
 }
 
 int main() {
-    int n = read(), j = read(), k = read();
+    int n = readInt(), j = readInt(), k = readInt();
     // 创建链表
     for(int i = 1;i <= n;i++) {
         nptr p = getnode(i);

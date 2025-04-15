@@ -27,7 +27,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
@@ -63,9 +63,9 @@ int cmp(const void *a, const void *b) {
 }
 
 int main() {
-    int n = read(), m = read();
+    int n = readInt(), m = readInt();
     for(int i = 0; i < m ;i++) 
-        e[i].id = read(), e[i].u = read(), e[i].v = read(), e[i].weight = read();
+        e[i].id = readInt(), e[i].u = readInt(), e[i].v = readInt(), e[i].weight = readInt();
     qsort(e, m, sizeof(e[0]), cmp);
     int totalWeight = 0, cnt = 0;
 

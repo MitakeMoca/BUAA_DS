@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d", &tem);
     return tem;
@@ -22,10 +22,10 @@ void dfs(int i, int j) {
 }
 
 int main() {
-    n = read();
+    n = readInt();
     for(int i = 1; i <= n; i++)
         for(int j = 1; j <= n; j++)
-            a[i][j] = read();
+            a[i][j] = readInt();
 
     // 从 (0, 0) 开始出发
     dfs(0, 0);

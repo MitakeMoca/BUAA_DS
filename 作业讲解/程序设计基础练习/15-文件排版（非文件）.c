@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
@@ -14,7 +14,7 @@ char geshi[10005];
 
 int main() {
     
-    int n = read();
+    int n = readInt();
     sprintf(geshi, "%-%%ds", n - 2);
     // 吃掉第一行有效语句前的所有无效字符
     while(getchar() != '\n');

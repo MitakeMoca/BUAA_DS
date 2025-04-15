@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 // 复杂度 O sqrt(n)
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
 }
 
 int main() {
-    int n = read();
+    int n = readInt();
     int i = 2;
     while(i * i <= n) {
         while(n % i == 0)

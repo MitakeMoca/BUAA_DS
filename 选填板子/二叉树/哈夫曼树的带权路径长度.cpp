@@ -13,7 +13,7 @@
 
 #include <stdio.h>
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d", &tem);
     return tem;
@@ -60,10 +60,10 @@ void push(int x, int n) {
 }
 
 int main() {
-    n = read();
+    n = readInt();
 
     for (int i = 0; i < n; i++)
-        heap[i] = read();
+        heap[i] = readInt();
 
     // 数组 -> 堆 的初始化操作
     for (int i = (n - 1 - 1) / 2; i >= 0; i--)

@@ -10,7 +10,7 @@ int backStk[105], backTop = -1;
 int forwardStk[105], forwardTop = -1;
 char op[15], url[85];
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d", &tem);
     return tem;
@@ -73,7 +73,7 @@ int main() {
         updateWebsite(current);
     }
 
-    int tem = read();
+    int tem = readInt();
     for(int i = 0; i < total; i++)
         printf("%s\n", page[history[i]]);
     

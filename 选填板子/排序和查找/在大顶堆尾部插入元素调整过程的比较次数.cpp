@@ -15,7 +15,7 @@
 
 #include <stdio.h>
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d", &tem);
     return tem;
@@ -30,11 +30,11 @@ void swap(int *a, int *b) {
 }
 
 int main() {
-    int n = read();
+    int n = readInt();
     for (int i = 0; i < n; i++)
-        heap[i] = read();
+        heap[i] = readInt();
 
-    int x = read();
+    int x = readInt();
     heap[n] = x;
     n++;
 

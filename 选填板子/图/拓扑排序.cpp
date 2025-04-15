@@ -22,7 +22,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
@@ -46,9 +46,9 @@ void topoLogic(int i) {
 }
 
 int main() {
-    n = read(), m = read();
+    n = readInt(), m = readInt();
     for(int i = 0; i < m ;i++) {
-        int u = read(), v = read();
+        int u = readInt(), v = readInt();
         e[u][v] = 1, de[v]++;
     }
 

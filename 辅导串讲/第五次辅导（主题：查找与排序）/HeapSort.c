@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
@@ -31,10 +31,10 @@ void adjust(int i, int n) {
 }
 
 int main() {
-    int n = read();
+    int n = readInt();
 
     for(int i = 0; i < n ;i++)
-        a[i] = read();
+        a[i] = readInt();
 
     for (int i = (n - 1 - 1) / 2; i >= 0; i--) 
         adjust(i, n);

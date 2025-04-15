@@ -3,7 +3,7 @@
 #include <math.h>
 #include <stdlib.h>
 
-int read( ) {
+int readInt( ) {
     int tem;
     scanf("%d",&tem);
     return tem;

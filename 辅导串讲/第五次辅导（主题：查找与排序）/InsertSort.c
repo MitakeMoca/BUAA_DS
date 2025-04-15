@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
@@ -16,10 +16,10 @@ void swap(int *a, int *b) {
 }
 
 int main() {
-    int n = read();
+    int n = readInt();
 
     for(int i = 1; i <= n ;i++)
-        a[i] = read();
+        a[i] = readInt();
 
     for (int i = 2; i <= n; ++i) {
         int key = a[i];

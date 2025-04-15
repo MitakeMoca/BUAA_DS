@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d", &tem);
     return tem;
@@ -30,7 +30,7 @@ char func[1005];
 int main() {
     int op;
     while(1) {
-        op = read();
+        op = readInt();
         if(op == 8) {
             scanf("%s", func);
             int newId = find(func);

@@ -2,7 +2,7 @@
 
 int now[15], vis[15], n;
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d", &tem);
     return tem;
@@ -28,7 +28,7 @@ void dfs(int i) {
 }
 
 int main() {
-    n = read();
+    n = readInt();
     dfs(0);
     return 0;
 }

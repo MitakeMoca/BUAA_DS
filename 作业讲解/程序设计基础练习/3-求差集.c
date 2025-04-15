@@ -2,7 +2,7 @@
 
 int a[1000005];
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
@@ -11,9 +11,9 @@ int read() {
 int main() {
     int tem;
     int cnt = 0;
-    while((tem = read()) != -1)
+    while((tem = readInt()) != -1)
         a[++cnt] = tem;
-    while((tem = read()) != -1) {
+    while((tem = readInt()) != -1) {
         for(int i = 1; i <= cnt; i++) 
             if(a[i] == tem) {
                 a[i] = -1;

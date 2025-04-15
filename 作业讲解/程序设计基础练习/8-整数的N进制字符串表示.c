@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d", &tem);
     return tem;
@@ -16,7 +16,7 @@ char num_to_alpha(int i) {
 
 int output[105];
 int main() {
-    int n = read(), b = read();
+    int n = readInt(), b = readInt();
     int flag = 0;
     // 特判一下 0，大家可以试试如果没写这一行可能有什么后果
     if(n == 0) {

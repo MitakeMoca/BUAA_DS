@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
@@ -48,10 +48,10 @@ void mergeSort(int l, int r) {
 }
 
 int main() {
-    int n = read();
+    int n = readInt();
 
     for(int i = 1; i <= n ;i++)
-        a[i] = read();
+        a[i] = readInt();
 
     mergeSort(1, n);
 

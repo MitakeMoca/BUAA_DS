@@ -2,7 +2,7 @@
 typedef long long ll;
 const int maxn = 1e5 + 5;
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
@@ -24,7 +24,7 @@ int reserve(int num) {
 }
 
 int main() {
-    int num = read();
+    int num = readInt();
     if(isPrime(num) && isPrime(reserve(num)))
         printf("yes");
     else

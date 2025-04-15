@@ -16,7 +16,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
@@ -25,11 +25,11 @@ int read() {
 int a[10005];
 
 int main() {
-    int n = read();
+    int n = readInt();
     for(int i = 0; i < n ;i++)
-        a[i] = read();
+        a[i] = readInt();
 
-    int x = read();
+    int x = readInt();
     int l = 0, r = n - 1;
     while(l <= r) {
         int mid = (l + r) >> 1;

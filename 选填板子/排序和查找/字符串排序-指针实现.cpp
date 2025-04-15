@@ -25,7 +25,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
@@ -40,7 +40,7 @@ int cmp(const void *a, const void *b) {
 }
 
 int main() {
-    int n = read();
+    int n = readInt();
     for(int i = 0; i < n ;i++) {
         scanf(" %s", tem);
         str[i] = (char *)malloc(strlen(tem) + 1);

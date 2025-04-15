@@ -28,7 +28,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
@@ -51,9 +51,9 @@ int cmp(const void *a, const void *b) {
 }
 
 int main() {
-    int n = read();
+    int n = readInt();
     for(int i = 1; i <= n; i++)
-        a[i].id = read(), scanf("%s", a[i].name);
+        a[i].id = readInt(), scanf("%s", a[i].name);
 
     qsort(a + 1, n, sizeof(a[0]), cmp);
     for(int i = 1; i <= n; i++)

@@ -3,7 +3,7 @@
 
 // 文件读写的前提是输入文件存在
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
@@ -16,7 +16,7 @@ int main() {
     int n;
 
     // 假设先从文件中读入 n，再读入 n 个整数
-    n = read();
+    n = readInt();
     for(int i = 1; i <= n ;i++)
         scanf("%d", &a[i]);
 

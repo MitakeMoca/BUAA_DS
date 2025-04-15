@@ -21,7 +21,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
@@ -42,7 +42,7 @@ int pop() {
 }
 
 int main() {
-    int n = read();
+    int n = readInt();
     for(int i = 0; i < n ;i++)
         scanf(" %c", &element[i]);
     for(int i = 0; i < n ;i++)

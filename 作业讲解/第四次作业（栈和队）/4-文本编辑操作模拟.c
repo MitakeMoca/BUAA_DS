@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d", &tem);
     return tem;
@@ -70,27 +70,27 @@ int main() {
     gets(str);
 
     // 先读入已经做完的操作
-    int n = read();
+    int n = readInt();
     for(int i = 1; i <= n; i++) {
-        int op = read(), pos = read();
+        int op = readInt(), pos = readInt();
         scanf("%s", tem);
         push(op, pos);   
     }
 
     // 读入新的操作
     while(1) {
-        int op = read();
+        int op = readInt();
         if(op == -1)
             break;
         if(op == 1) {
             // 插入操作
-            int pos = read();
+            int pos = readInt();
             scanf("%s", tem);
             insert(pos);
             push(op, pos);
         } else if(op == 2) {
             // 删除操作，在 del 里还要维护 tem
-            int pos = read(), len = read();
+            int pos = readInt(), len = readInt();
             del(pos, len);
             push(op, pos);
         } else

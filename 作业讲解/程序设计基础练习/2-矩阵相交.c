@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d", &tem);
     return tem;
@@ -13,8 +13,8 @@ int ReLU(int x) {
 }
 
 int main() {
-    int ax1 = read(), ay1 = read(), ax2 = read(), ay2 = read();
-    int bx1 = read(), by1 = read(), bx2 = read(), by2 = read();
+    int ax1 = readInt(), ay1 = readInt(), ax2 = readInt(), ay2 = readInt();
+    int bx1 = readInt(), by1 = readInt(), bx2 = readInt(), by2 = readInt();
 
     int max_ax = myMax(ax1, ax2), min_ax = myMin(ax1, ax2), max_bx = myMax(bx1, bx2), min_bx = myMin(bx1, bx2);
     int x = ReLU(myMin(max_ax, max_bx) - myMax(min_ax, min_bx));

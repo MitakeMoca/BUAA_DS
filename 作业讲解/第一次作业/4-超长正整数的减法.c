@@ -4,7 +4,7 @@
 int num1[105], num2[105];
 char tem[105], ans[105];
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;

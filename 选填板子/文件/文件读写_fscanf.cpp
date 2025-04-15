@@ -3,7 +3,7 @@
 
 // 文件读写的前提是输入文件存在
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;

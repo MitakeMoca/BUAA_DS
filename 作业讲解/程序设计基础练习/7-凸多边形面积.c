@@ -2,7 +2,7 @@
 
 double x[20], y[20];
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
@@ -17,7 +17,7 @@ double area(int i, int j, int k) {
 }
 
 int main() {
-    int n = read();
+    int n = readInt();
     for(int i = 1; i <= n; i++)
         scanf("%lf %lf", &x[i], &y[i]);
     

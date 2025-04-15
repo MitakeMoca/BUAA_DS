@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
@@ -16,10 +16,10 @@ void swap(int *a, int *b) {
 }
 
 int main() {
-    int n = read();
+    int n = readInt();
 
     for(int i = 1; i <= n ;i++)
-        a[i] = read();
+        a[i] = readInt();
     
     // 排序过程最多执行 n - 1 次
     for (int i = 1; i < n; ++i) {

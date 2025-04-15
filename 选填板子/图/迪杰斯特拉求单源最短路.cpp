@@ -30,7 +30,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
@@ -68,11 +68,11 @@ void addedge(int u, int v, int weight) {
 }
 
 int main() {
-    int n = read(), m = read();
-    int sta = read(), end = read();
+    int n = readInt(), m = readInt();
+    int sta = readInt(), end = readInt();
 
     for(int i = 0; i < m ;i++) {
-        int u = read(), v = read(), weight = read();
+        int u = readInt(), v = readInt(), weight = readInt();
         addedge(u, v, weight);  // 单向边
     }
 

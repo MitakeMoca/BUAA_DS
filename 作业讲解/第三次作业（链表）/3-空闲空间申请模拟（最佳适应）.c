@@ -21,7 +21,7 @@ nptr getnode(int sz, int pos)  {
     return p;
 }
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
@@ -52,9 +52,9 @@ nptr alloc(nptr now, int sz) {
 }
 
 int main() {
-    int n = read();
+    int n = readInt();
     for(int i = 1;i <= n;i++) {
-        int pos = read(), sz = read();
+        int pos = readInt(), sz = readInt();
         if(head == NULL)    head = tail = getnode(sz, pos);
         else {
             nptr p = getnode(sz, pos);
@@ -69,7 +69,7 @@ int main() {
 
     nptr now = head;
     int sz;
-    while((sz = read()) != -1) 
+    while((sz = readInt()) != -1) 
         now = alloc(now, sz);
 
     nptr tem = now;

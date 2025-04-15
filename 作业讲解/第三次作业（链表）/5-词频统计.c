@@ -6,7 +6,7 @@
 typedef struct node  node;
 typedef struct node* nptr;
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;

@@ -2,17 +2,17 @@
 
 int a[15][15];
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
 }
 
 int main() {
-    int n = read();
+    int n = readInt();
     for(int i = 1; i <= n; i++)
         for(int j = 1; j <= n; j++)
-            a[i][j] = read();
+            a[i][j] = readInt();
     
     // 在 %c 前面加空格可以忽略所有空格和换行符
     char op;
@@ -25,7 +25,7 @@ int main() {
 
         for(int i = 1; i <= n; i++)
             for(int j = 1; j <= n; j++)
-                a[i][j] += tem * read();
+                a[i][j] += tem * readInt();
 
         // 读入新的操作符
         scanf(" %c", &op);

@@ -2,14 +2,14 @@
 
 // 贪心：数字越小越多，从小到大枚举
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
 }
 
 int main() {
-    int n = read();
+    int n = readInt();
     for(int i = 1; i < n; i++) { // 从 1 开始枚举
         int sum = i, cnt = i + 1;
         while(sum < n) 

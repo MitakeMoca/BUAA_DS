@@ -3,7 +3,7 @@
 
 char num[105];
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d", &tem);
     return tem;

@@ -15,7 +15,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
@@ -34,7 +34,7 @@ char pop() {
 }
 
 int main() {
-    int n = read();
+    int n = readInt();
     getchar();
     gets(input);
     gets(output);

@@ -35,7 +35,7 @@ int findLinkNum(nptr p) {
     return ret;
 }
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
@@ -44,9 +44,9 @@ int read() {
 nptr a[10005];
 
 int main() {
-    int n = read();
+    int n = readInt();
     for(int i = 1;i <= n;i++) {
-        int x1 = read(), y1 = read(), x2 = read(), y2 = read();
+        int x1 = readInt(), y1 = readInt(), x2 = readInt(), y2 = readInt();
         a[i] = getnode(x1, y1, x2, y2);
     }
 

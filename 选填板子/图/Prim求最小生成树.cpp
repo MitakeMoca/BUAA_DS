@@ -31,7 +31,7 @@
 
 const int INF = 0x3f3f3f3f;
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
@@ -74,16 +74,16 @@ nptr addedge(int id, int u, int v, int weight) {
 }
 
 int main() {
-    int n = read(), m = read(), cnt = 0;    // cnt 表示加入最小生成树边的个数
+    int n = readInt(), m = readInt(), cnt = 0;    // cnt 表示加入最小生成树边的个数
     int totalWeight = 0;
-    int sta = read();
+    int sta = readInt();
     
     for(int i = 0; i < n ;i++)
         if(i != sta)
             dis[i] = INF;
 
     for(int i = 0; i < m ;i++) {
-        int id = read(), u = read(), v = read(), weight = read();
+        int id = readInt(), u = readInt(), v = readInt(), weight = readInt();
         addedge(id, u, v, weight);
         addedge(id, v, u, weight);
     }

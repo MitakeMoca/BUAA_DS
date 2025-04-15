@@ -15,7 +15,7 @@ nptr headA, tailA;  // 表示两个多项式的头部
 nptr headB, tailB;
 nptr head, tail;   // 代表答案多项式
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
