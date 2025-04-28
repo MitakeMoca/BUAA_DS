@@ -46,8 +46,9 @@ void serve(int t, int k) {
 
 int queNum = 3, n;
 void atTime(int t) {
-    while(wait >= queNum * 7 && queNum < 5)
-        queNum++;
+    if(t <= n)
+        while(wait >= queNum * 7 && queNum < 5)
+            queNum++;
     lazySkip();
     serve(t, queNum);
     while(wait < queNum * 7 && queNum > 3)
