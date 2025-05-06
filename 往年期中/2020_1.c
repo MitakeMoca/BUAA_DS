@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-int read() {
+int readInt() {
     int tem;
     scanf("%d",&tem);
     return tem;
