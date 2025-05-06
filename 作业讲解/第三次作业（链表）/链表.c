@@ -95,11 +95,11 @@ void del(nptr p) {
         return ;
     }
 
-    if(p == head) { // 特殊情况 p 是头指针
+    if(p == head) { // 特殊情况 p 是头结点
         head = head -> nxt;
         head -> pre = NULL;
     }
-    else if(p == tail) { // 特殊情况 p 是尾指针
+    else if(p == tail) { // 特殊情况 p 是尾结点
         tail = tail -> pre;
         tail -> nxt = NULL;
     }
