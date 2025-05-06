@@ -32,7 +32,7 @@ int main() {
         else if(m != 0) {
             ident[m] = 0;
             int flag = 0;  
-            for(int i = 0;i < cnt;i++) 
+            for(int i = 0; i < cnt; i++) 
                 if(strcmp(identArr[i], ident) == 0) {
                     flag = 1;
                     break;

@@ -76,9 +76,10 @@ int main() {
         now = alloc(now, sz);
 
     nptr tem = now;
+    // 这不能用 do while 了，因为可能结点都被删光了，那就什么都不输出
     if(now != NULL)
         printf("%d %d\n", now -> pos, now -> sz), now = now -> next;
-    for(nptr p = now; p != tem;p = p -> next)
+    for(nptr p = now; p != tem; p = p -> next)
         printf("%d %d\n", p -> pos, p -> sz);
     return 0;
 }
