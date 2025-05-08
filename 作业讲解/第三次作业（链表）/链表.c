@@ -33,6 +33,7 @@ void insert_head(nptr p) {
         return ;
     }
     p -> nxt = head;
+    p -> pre = NULL;
     head -> pre = p;
     head = p;
 }
@@ -46,6 +47,7 @@ void insert_tail(nptr p) {
     }
     tail -> nxt = p;
     p -> pre = tail;
+    p -> nxt = NULL;
     tail = p;
 }
 
