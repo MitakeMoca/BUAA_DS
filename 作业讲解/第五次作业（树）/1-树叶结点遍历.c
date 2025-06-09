@@ -1,12 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int readInt() {
-    int tem;
-    scanf("%d", &tem);
-    return tem;
-}
-
 typedef struct node  node;
 typedef struct node* nptr;
 struct node {
@@ -54,13 +48,16 @@ void inDfs(nptr p) {
 }
 
 int main() {
-    int n = readInt();
+    int n;
+    scanf("%d", &n);
     for(int i = 1; i <= n; i++) {
+        int num;
+        scanf("%d", &num);
         if(root == NULL) {
-            root = getnode(readInt(), 1);
+            root = getnode(num, 1);
             continue;
         } else
-            insert(root, readInt());
+            insert(root, num);
     }
 
     inDfs(root);
