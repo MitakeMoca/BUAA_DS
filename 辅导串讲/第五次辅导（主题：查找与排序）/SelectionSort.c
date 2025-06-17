@@ -23,12 +23,13 @@ int main() {
     
     // 排序过程最多执行 n - 1 次
     for (int i = 1; i < n; ++i) {
+        // ith 代表最小的元素的下标
         int ith = i;
-        for (int j = i + 1; j <= n; ++j) {
+        for (int j = i + 1; j <= n; ++j) 
             if (a[j] < a[ith]) {
                 ith = j;
             }
-        }
+        // 将最小的元素与未排序部分的第一个元素交换
         swap(&a[i], &a[ith]);
     }
 

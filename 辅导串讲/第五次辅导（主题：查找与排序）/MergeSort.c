@@ -17,8 +17,9 @@ void swap(int *a, int *b) {
 }
 
 void merge(int l, int r) {
-    int mid = (l + r) >> 1;	// 根据优先级，括号不写也行
-    int i = l, j = mid + 1; // 两端的开始和结束
+    int mid = (l + r) >> 1;	
+    // 两端的开始和结束
+    int i = l, j = mid + 1; 
     int k = l;
     while((i <= mid) || (j <= r)) {	// 合并
         if(j > r || (i <= mid && a[i] <= a[j])) {
@@ -30,19 +31,17 @@ void merge(int l, int r) {
         }
     }
     
-    for(int i = l;i <= r;i++) {
+    for(int i = l;i <= r;i++) 
         a[i] = tem[i];    // 归还排好序的段
-    }
-        
 }
 
 void mergeSort(int l, int r) {
-    int mid = (l + r) >> 1; // 根据优先级，括号不写也行
-    
-    // 内部开销和合并开销
+    int mid = (l + r) >> 1;
     if(l < r) {
+        // 先对前后两部分排序
         mergeSort(l, mid);
         mergeSort(mid + 1, r);
+        // 合并两个有序数组
         merge(l, r);
     }
 }
