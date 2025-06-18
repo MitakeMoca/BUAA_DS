@@ -11,6 +11,7 @@ int readInt() {
 int a[10005];
 
 int bsearch(int left, int right, int target) {
+    int ret = 1;
     while (left <= right) {
         int mid = (left + right) >> 1;
 
