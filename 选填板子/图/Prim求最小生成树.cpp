@@ -63,14 +63,10 @@ nptr getnode(int id, int v, int weight) {
     return p;
 }
 
-nptr addedge(int id, int u, int v, int weight) {
-    nptr e1 = getnode(id, v, weight);
-    e1 -> next = head[u];
-    head[u] = e1;
-
-    nptr e2 = getnode(id, u, weight);
-    e2 -> next = head[v];
-    head[v] = e2;
+void addedge(int id, int u, int v, int weight) {
+    nptr e = getnode(id, v, weight);
+    e -> next = head[u];
+    head[u] = e;
 }
 
 int main() {
